@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VentasActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text=" Registro ventas"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:textColor="#05423C"
+        android:textSize="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/etcodigo_venta"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:hint="Codigo de venta"
+            android:inputType="text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/etfecha"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:hint="Fecha"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/etidentificacion_usuario"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:hint="identificacion usuario"
+            android:gravity="center"
+            android:inputType="text"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/etvalor_venta"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:hint="valor venta"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp">
+        <Button
+            android:id="@+id/btningresar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Ingresar"
+            android:textAllCaps="false"
+            android:backgroundTint="#1763D5"
+
+            />
+        <Button
+            android:id="@+id/btnconsultar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Consultar"
+            android:textAllCaps="false"
+            android:backgroundTint="#1763D5"
+            android:layout_marginLeft="20dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+        <Button
+            android:id="@+id/btnanular"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Anular"
+            android:textAllCaps="false"
+            android:backgroundTint="#1763D5"
+            />
+        <Button
+            android:id="@+id/btnregresar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:textAllCaps="false"
+            android:backgroundTint="#1763D5"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+</LinearLayout>
