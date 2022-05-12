@@ -89,7 +89,7 @@ public class VentasActivity extends AppCompatActivity implements Response.Listen
 
     }
     private void registrar_venta() {
-        String url = "http://192.168.1.56:80/usuarios/adicionarVenta.php";
+        String url = "http://172.16.59.28:81/usuarios/adicionarVenta.php";
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>()
                 {
@@ -128,14 +128,14 @@ public class VentasActivity extends AppCompatActivity implements Response.Listen
             codigo_venta.requestFocus();
         }
         else{
-            String url = "http://192.168.1.56:80/usuarios/consultarVenta.php?codigo_venta="+codigo_venta.getText().toString();
+            String url = "http://172.16.59.28:81/usuarios/consultarVenta.php?codigo_venta="+codigo_venta.getText().toString();
             xt = new JsonObjectRequest(Request.Method.GET,url,null,this,this);
             rd.add(xt);
         }
     }
 
     private void eliminar_venta() {
-        String url = "http://192.168.1.56:80/usuarios/eliminarVenta.php";
+        String url = "http://172.16.59.28:81/usuarios/eliminarVenta.php";
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>()
                 {

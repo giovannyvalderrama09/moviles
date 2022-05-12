@@ -91,7 +91,7 @@ public class UsuarioActivity extends AppCompatActivity implements Response.Liste
     }
 
     private void registrar_usuario() {
-        String url = "http://192.168.1.56:80/usuarios/registrocorreo.php";
+        String url = "http://172.16.59.28:81/usuarios/registrocorreo.php";
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>()
                 {
@@ -125,7 +125,7 @@ public class UsuarioActivity extends AppCompatActivity implements Response.Liste
     }
 
     private void modificar_usuario() {
-        String url = "http://192.168.1.56:80/usuarios/actualiza.php";
+        String url = "http://172.16.59.28:81/usuarios/actualiza.php";
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>()
                 {
@@ -159,7 +159,7 @@ public class UsuarioActivity extends AppCompatActivity implements Response.Liste
     }
 
     private void eliminar_usuario() {
-        String url = "http://192.168.1.56:80/usuarios/elimina.php";
+        String url = "http://172.16.59.28:81/usuarios/elimina.php";
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>()
                 {
@@ -209,7 +209,7 @@ public class UsuarioActivity extends AppCompatActivity implements Response.Liste
             jetusr.requestFocus();
         }
         else{
-            String url = "http://192.168.1.56:80/usuarios/consulta.php?usr="+jetusr.getText().toString();
+            String url = "http://172.16.59.28:81/usuarios/consulta.php?usr="+jetusr.getText().toString();
             jrq = new JsonObjectRequest(Request.Method.GET,url,null,this,this);
             rq.add(jrq);
         }

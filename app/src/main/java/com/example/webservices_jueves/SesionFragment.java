@@ -24,7 +24,7 @@ import org.json.JSONObject;
 public class SesionFragment extends Fragment implements Response.Listener<JSONObject>,Response.ErrorListener {
 
     EditText jetcorreo,jetclave;
-    Button jbtingresar;
+    Button ingresar;
     TextView jtvregistrar;
     RequestQueue rq;
     JsonRequest jrq;
@@ -38,7 +38,7 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
         View vista = inflater.inflate(R.layout.fragment_sesion,container,false);
         jetcorreo = vista.findViewById(R.id.etcorreo);
         jetclave = vista.findViewById(R.id.etclave);
-        jbtingresar = vista.findViewById(R.id.btningresar);
+        ingresar= vista.findViewById(R.id.btningresaR);
         jtvregistrar=vista.findViewById(R.id.tvregistrar);
         rq = Volley.newRequestQueue(getContext());//conexion a internet
 
@@ -46,10 +46,12 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
             @Override
             public void onClick(View view) {
 
+                Intent registro= new Intent(getActivity(),UsuarioActivity.class);
+                startActivity(registro);
             }
         });
 
-        jbtingresar.setOnClickListener(new View.OnClickListener() {
+        ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 iniciar_sesion();
@@ -64,7 +66,7 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
             jetcorreo.requestFocus();
         }
         else{
-            String url = "http://192.168.1.56:80/usuarios/sesion.php?correo="+jetcorreo.getText().toString()+"&clave="+jetclave.getText().toString();
+            String url = "http://172.16.59.28:81/usuarios/sesion.php?correo="+jetcorreo.getText().toString()+"&clave="+jetclave.getText().toString();
             jrq = new JsonObjectRequest(Request.Method.GET,url,null,this,this);
             rq.add(jrq);
         }
