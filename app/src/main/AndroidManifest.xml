@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WebServices_Jueves">
         <activity
+            android:name=".Ventas"
+            android:exported="false" />
+        <activity
             android:name=".UsuarioActivity"
             android:exported="false" />
         <activity

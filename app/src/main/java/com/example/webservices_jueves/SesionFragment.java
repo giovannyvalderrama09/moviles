@@ -103,7 +103,7 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
         //misesion.putExtra("musr",usr.getText().toString());
         //startActivity(misesion);
 
-        Intent cambio = new Intent(getContext(),VentasActivity.class);
+        Intent cambio = new Intent(getContext(),Ventas.class);
         startActivity(cambio);
     }
 }

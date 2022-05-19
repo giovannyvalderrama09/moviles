@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VentasActivity"
+    tools:context=".Ventas"
     android:orientation="vertical">
-
 
     <TextView
         android:layout_width="match_parent"
@@ -29,7 +28,7 @@
             android:layout_height="60dp"
             android:gravity="center"
             android:hint="Codigo de venta"
-            android:inputType="text" />
+            android:inputType="number"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,7 +42,7 @@
             android:layout_height="60dp"
             android:gravity="center"
             android:hint="Fecha"
-            android:inputType="text" />
+         android:inputType="date"/>
     </LinearLayout>
 
     <LinearLayout
@@ -90,7 +89,7 @@
             android:id="@+id/btningresar"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Ingresar"
+            android:text="Registrar"
             android:textAllCaps="false"
             android:backgroundTint="#2196F3"
 
@@ -146,6 +145,3 @@
     </LinearLayout>
 
 </LinearLayout>
-
-
-
